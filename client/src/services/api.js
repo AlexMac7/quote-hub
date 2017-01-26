@@ -6,3 +6,12 @@ export function getRecentQuotes(app) {
     }
   ).then((data, err) => data.data);
 }
+
+export function createQuote(app, Author, Quote, imageURL) {
+  const quotes = app.service('quotes');
+  return quotes.create({
+    Author,
+    Quote,
+    imageURL
+  }).then((data, err) => data);
+}

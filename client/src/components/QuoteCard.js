@@ -9,8 +9,10 @@ class QuoteCard extends Component {
     return (
       <Card
       centered={true}
+      image={quote.imageURL}
       header={quote.Author}
-      meta='Description'
+      meta='Quote'
+      description={quote.Quote}
       />
     )
   }
